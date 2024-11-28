@@ -26,20 +26,20 @@
 
 <body class="bg-gray-100">
     <div>
-        <!--COMPONENT 1-->
+        <!-- COMPONENT 1 -->
         <div class="mx-auto bg-white">
             <!-- Main container with navigation and header content -->
-             <div class="relative flex flex-wrap items-center justify-between w-full shrink-0">
+             <div class="relative flex flew-wrap items-center justify-between w-full shrik-0">
                 <div class="px-4">
                     <img class="h-8" src="assets\component-1\navigation\cache-bank-logo.png">
                 </div>
-                <div class="md:flex items-center justify-between text-black gap-12">
-                    <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Product</a>
-                    <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Features</a>
-                    <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Get Started</a>
-                    <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Contact</a>
+                <div class="hidden md:flex items-center justify-between text-black gap-12">
+                    <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#products">Products</a>
+                    <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#features">Features</a>
+                    <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#pricing">Get Started</a>
+                    <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#contact">Contact</a>
                 </div>
-                <div class="gap-8 p-4 items-center md:flex">
+                <div class="hidden gap-8 p-4 items-center md:flex">
                     <button class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
                     <button class="px-4 py-2 text-sm font-bold text-dark-grey-800 bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
                 </div>
@@ -72,19 +72,33 @@
             </defs>
           </svg>
                 </button>
-                <div></div>
+                <div class="absolute hidden md:hidden flex md:flex flex-col items-start justify-center w-full gap-3 overflow-hidden bg-white max-h-screen top-full px-4 py-8 shadow-main" id="mobile-menu">
+                    
+                        <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#products">Product</a>
+                        <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#features">Features</a>
+                        <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#pricing">Get Started</a>
+                        <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#contact">Contact</a>
+                
+                        <button class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
+                        <button class="px-4 py-2 text-sm font-bold text-dark-grey-800 bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
+
+                </div>
              </div>
         </div>
-        <div class="w-full">
+        <!-- COMPONENT 2 -->
+        <div class="w-full" id="products">
             <!-- Wide full-width container for additional content -->
         </div>
-        <div class="container mx-auto">
+        <!-- COMPONENT 3 -->
+        <div class="container mx-auto" id="features">
             <!-- Centered container for more content -->
         </div>
-        <div class="w-full">
+        <!-- COMPONENT 4 -->
+        <div class="w-full" id="pricing">
             <!-- Wide full-width container for additional content -->
         </div>
-        <div class="w-full">
+        <!-- COMPONENT 5 -->
+        <div class="w-full" id="contact">
             <!-- Wide full-width container for additional content -->
         </div>
     </div>
@@ -94,7 +108,7 @@
         <!-- Full-width footer container with green background -->
     </div>
     <script>
-        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {alert("Hello!")});
+        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {document.getElementById("mobile-menu").classList.toggle("hidden")});
     </script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
